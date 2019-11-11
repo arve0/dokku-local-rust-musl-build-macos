@@ -18,7 +18,7 @@ Build your Rust project locally and push the binaries to your dokku-server.
 cargo dokku init your.dokku.host
 git commit -m "added dokku build config"
 # builds and pushes current version
-cargo dokku deploy
+cargo dokku deploy # bump major/minor/patch version? tag commit?
 ```
 
 ## How?
