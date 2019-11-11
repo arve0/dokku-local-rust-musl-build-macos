@@ -8,10 +8,18 @@ Build your Rust project locally and push the binaries to your dokku-server.
 - and don't want to bog down the production CPU.
 
 
-## Goals
+## Goal
 - Easy deployment of web applications to dokku
 - No git repo bloat / no history of built binary
 
+### Vision
+```sh
+# install system dependencies, init repo configs
+cargo dokku init your.dokku.host
+git commit -m "added dokku build config"
+# builds and pushes current version
+cargo dokku deploy
+```
 
 ## How?
 Follow this steps to deploy an actix-web application manually.
