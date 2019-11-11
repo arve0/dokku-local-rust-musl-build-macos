@@ -41,7 +41,8 @@ docker build -t dokku/dokku-local-rust-musl-build-macos:v0.1.0 .
 
 ### deployment
 ```
-docker save dokku/dokku-local-rust-musl-build-macos:v12 | bzip2 | ssh my.dokku.host "bunzip2 | docker load"
+docker save dokku/dokku-local-rust-musl-build-macos:v0.1.0 | bzip2 | ssh dokku "bunzip2 | docker load"
+ssh my.dokku.host "dokku tags:create test-app previous; dokku tags:deploy test-app v0.1.0"
 ```
 
 ## TODO
