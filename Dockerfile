@@ -1,2 +1,2 @@
 FROM gliderlabs/alpine:3.4
-ENTRYPOINT ["target/release/dokku-local-rust-musl-build-macos"]
+ENTRYPOINT ["target/x86_64-unknown-linux-musl/release/dokku-local-rust-musl-build-macos"]
